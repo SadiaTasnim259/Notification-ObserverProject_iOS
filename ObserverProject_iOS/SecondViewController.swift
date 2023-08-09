@@ -7,23 +7,40 @@
 
 import UIKit
 
+var secondVCIsListening = false
 class SecondViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var listeningSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if secondVCIsListening {
+            listeningSwitch.setOn(true, animated: false)
+            switchToggled(listeningSwitch)
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func switchToggled(_ sender: UISwitch) {
+        
+        if sender.isOn {
+            view.backgroundColor = UIColor.systemMint
+            nameLabel.text = "Listening"
+            secondVCIsListening = true
+        }else{
+            view.backgroundColor = UIColor.systemCyan
+            nameLabel.text = "Not Listening"
+            secondVCIsListening = false
+        }
     }
-    */
-
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        
+        let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
+                
+            self.navigationController?.pushViewController(thirdViewController, animated: true)
+    }
+    
 }
