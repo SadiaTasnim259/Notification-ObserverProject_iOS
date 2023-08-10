@@ -13,6 +13,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var listeningSwitch: UISwitch!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +35,14 @@ class SecondViewController: UIViewController {
             nameLabel.text = "Not Listening"
             secondVCIsListening = false
         }
+    }
+    
+    func setupObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleNotification(_:)), name: .myNotificationName, object: nil)
+    }
+    
+    @objc func handleNotification(_ sender:Notification){
+        nameLabel.text = sender.userInfo? ["name"] as? String
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {

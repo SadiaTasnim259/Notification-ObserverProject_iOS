@@ -15,6 +15,7 @@
 		0490C5E42A838AC2001ED5E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0490C5E22A838AC2001ED5E0 /* LaunchScreen.storyboard */; };
 		0490C5EC2A83E0AD001ED5E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490C5EB2A83E0AD001ED5E0 /* SecondViewController.swift */; };
 		0490C5EE2A83E0C3001ED5E0 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490C5ED2A83E0C3001ED5E0 /* ThirdViewController.swift */; };
+		04F8EB612A849FDF007B4D37 /* NSNotification.Name+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8EB602A849FDF007B4D37 /* NSNotification.Name+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0490C5E52A838AC2001ED5E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0490C5EB2A83E0AD001ED5E0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0490C5ED2A83E0C3001ED5E0 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		04F8EB602A849FDF007B4D37 /* NSNotification.Name+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification.Name+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0490C5E02A838AC2001ED5E0 /* Assets.xcassets */,
 				0490C5E22A838AC2001ED5E0 /* LaunchScreen.storyboard */,
 				0490C5E52A838AC2001ED5E0 /* Info.plist */,
+				04F8EB602A849FDF007B4D37 /* NSNotification.Name+Ext.swift */,
 			);
 			path = ObserverProject_iOS;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				0490C5EE2A83E0C3001ED5E0 /* ThirdViewController.swift in Sources */,
 				0490C5D82A838AC0001ED5E0 /* AppDelegate.swift in Sources */,
 				0490C5DA2A838AC0001ED5E0 /* SceneDelegate.swift in Sources */,
+				04F8EB612A849FDF007B4D37 /* NSNotification.Name+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
