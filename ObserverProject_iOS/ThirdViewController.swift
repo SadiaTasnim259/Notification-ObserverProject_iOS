@@ -13,17 +13,12 @@ class ThirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         NotificationCenter.default.post(name: .myNotificationName, object: nil, userInfo: ["name": nameTextField.text ?? ""])
-        
         navigationController?.popViewController(animated: true)
     }
-    
-
 }
 
 

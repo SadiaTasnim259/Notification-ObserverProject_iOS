@@ -20,8 +20,13 @@ class SecondViewController: UIViewController {
         if secondVCIsListening {
             listeningSwitch.setOn(true, animated: false)
             switchToggled(listeningSwitch)
+            setupObserver()
         }
         
+    }
+    
+    deinit{
+        NotificationCenter.default.removeObserver(self)
     }
     
     @IBAction func switchToggled(_ sender: UISwitch) {
@@ -30,10 +35,12 @@ class SecondViewController: UIViewController {
             view.backgroundColor = UIColor.systemMint
             nameLabel.text = "Listening"
             secondVCIsListening = true
+            setupObserver()
         }else{
             view.backgroundColor = UIColor.systemCyan
             nameLabel.text = "Not Listening"
             secondVCIsListening = false
+            clearObserver()
         }
     }
     
@@ -43,6 +50,11 @@ class SecondViewController: UIViewController {
     
     @objc func handleNotification(_ sender:Notification){
         nameLabel.text = sender.userInfo? ["name"] as? String
+        print("from SecondViewController")
+    }
+    
+    func clearObserver(){
+        NotificationCenter.default.removeObserver(self)
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
